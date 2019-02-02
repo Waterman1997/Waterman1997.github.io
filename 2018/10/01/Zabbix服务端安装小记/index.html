@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="碎念">
 <meta property="og:description" content="Zabbix服务端安装小记 安装前需要先关闭selinux和firewall   关闭Selinux  [root@zabbix ~]# vi /etc/selinux/config 将SELINUX=enforcing改为SELINUX=disabled 设置后需要重启才能生效 [root@zabbix ~]# setenforce 0       #临时关闭 [root@zabbix ~]#">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-01T05:51:37.657Z">
+<meta property="og:updated_time" content="2019-02-02T08:34:37.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Zabbix服务端安装小记">
 <meta name="twitter:description" content="Zabbix服务端安装小记 安装前需要先关闭selinux和firewall   关闭Selinux  [root@zabbix ~]# vi /etc/selinux/config 将SELINUX=enforcing改为SELINUX=disabled 设置后需要重启才能生效 [root@zabbix ~]# setenforce 0       #临时关闭 [root@zabbix ~]#">
@@ -364,9 +364,15 @@
 </ul>
 <p><code>[root@zabbix ~]# systemctl start zabbix-agent</code>  #启动zabbix-agent服务</p>
 <p><code>[root@zabbix ~]# systemctl enable zabbix-agent</code>   #设置zabbix-agent服务开机自动启动</p>
-<ol start="4">
+<ol start="5">
 <li><h5 id="zabbix-web-网页安装"><a href="#zabbix-web-网页安装" class="headerlink" title="zabbix web 网页安装"></a>zabbix web 网页安装</h5></li>
 </ol>
+<ul>
+<li>访问网站，例如：http://本机IP/zabbix</li>
+<li>ZabbixServer的默认账号Admin 密码zabbix</li>
+<li>移除或改名web目录下面的setup.php文件</li>
+<li>更改zabbix的管理员密码</li>
+</ul>
 
       
     </div>
